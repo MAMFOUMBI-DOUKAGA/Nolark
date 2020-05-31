@@ -192,13 +192,13 @@ footer a{
     body {
         font-size: large;
     }
-    
+
     header, section {
-        width: auto; /* Suppression de la largeur définie */
+        width: auto; /* Suppression de la largeur dÃ©finie */
     }
-    
+
     header img {
-        width: 100%; /* Bannière sur toute la largeur */
+        width: 100%; /* BanniÃ¨re sur toute la largeur */
         background-color: black; /* Extension artificielle noire */
         padding-bottom: 15px; /* du bas de l'image sur 15 pixels */
     }
@@ -213,7 +213,7 @@ footer a{
 
     nav ul {
         display: flex; /* Ce conteneur est "flexible" */
-        flex-direction: column; /* Les éléments sont mis côte à côte */
+        flex-direction: column; /* Les Ã©lÃ©ments sont mis cÃ´te Ã  cÃ´te */
         align-items: flex-start; /* Alignement sur la gauche */
         position: absolute;
         margin: -39px 0 0 -60px;
@@ -230,7 +230,7 @@ footer a{
         width: 100%;
     }
 
-    
+
     nav input {
         display: block; /* Affichage de l'input pour pouvoir cliquez dessus */
         position: absolute;
@@ -238,7 +238,7 @@ footer a{
         z-index: 2; /* On le place au-dessus du bouton de menu (hamburger) */
     }
 
-    /* Création artificielle de l'icone de menu (hamburger) */
+    /* CrÃ©ation artificielle de l'icone de menu (hamburger) */
     nav span {
         display: block;
         width: 30px;
@@ -247,7 +247,7 @@ footer a{
         position: relative;
         background: black;
         border-radius: 3px;
-        z-index: 1; /* En dessous de l'input défini avant */
+        z-index: 1; /* En dessous de l'input dÃ©fini avant */
         /*transform-origin: 4px 0px; /* Modification du centre pour rotation */
         transition: transform 0.5s ease, background 0.5s ease, opacity 0.55s ease;
     }
@@ -257,12 +257,12 @@ footer a{
         background: white;
     }
 
-    /* On fait pivoter la première de 45° (sens horaire) */
+    /* On fait pivoter la premiÃ¨re de 45Â° (sens horaire) */
     nav input:checked ~ span:nth-child(2) {
         transform: rotate(45deg) translate(7px, 5px);
     }
 
-    /* On fait pivoter la dernière de 45° (sens anti-horaire) */
+    /* On fait pivoter la derniÃ¨re de 45Â° (sens anti-horaire) */
     nav input:checked ~ span:nth-child(4) {
         transform: rotate(-45deg) translate(10px, -6px);
     }
@@ -272,7 +272,7 @@ footer a{
         opacity: 0; 
     }
 
-    /* On annule la translation vers la gauche qui a caché le menu */
+    /* On annule la translation vers la gauche qui a cachÃ© le menu */
     nav input:checked ~ ul {
         transform: none;
     }
@@ -300,19 +300,16 @@ footer a{
     }
 
     #gauche, #milieu, #droite {
-        background-size: contain;
-        background: none;
+        background-size: contain; 
     }
-    
+
     footer {
         display: none;
     }
-   
-    
-}
-@media screen and (max-width:576px) and (max-width:768px) {
-    #thematique { 
-        flex-direction: row; /* Sur tablette, les casques de l'accueil sont côte à côte */
-    }
 }
 
+@media screen and (min-width:576px) and (max-width:768px) {
+    #thematique {
+        flex-direction: row; /* Sur tablette, on met les casques de la page d'accueil cÃ´te Ã  cÃ´te */
+    }
+}
